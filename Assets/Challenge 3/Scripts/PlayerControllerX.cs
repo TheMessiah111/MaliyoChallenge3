@@ -64,7 +64,9 @@ public class PlayerControllerX : MonoBehaviour
             Destroy(other.gameObject);
 
         }
-        else if (other.gameObject.CompareTag("Ground")){
+        // if balloon colides with floor, it bounces
+        else if (other.gameObject.CompareTag("Ground"))
+        {
             playerRb.AddForce(Vector3.up * 50, ForceMode.Impulse);
             playerAudio.PlayOneShot(balloonBounceSound, 1.0f);
         }
