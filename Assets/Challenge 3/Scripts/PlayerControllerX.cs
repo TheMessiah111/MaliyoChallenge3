@@ -41,6 +41,7 @@ public class PlayerControllerX : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             playerRb.AddForce(Vector3.up * floatForce, ForceMode.Impulse);
+            Debug.Log("Space key was pressed");
         }
     }
 
@@ -69,6 +70,7 @@ public class PlayerControllerX : MonoBehaviour
         {
             playerRb.AddForce(Vector3.up * 50, ForceMode.Impulse);
             playerAudio.PlayOneShot(balloonBounceSound, 1.0f);
+            Debug.Log("Hit Ground");
         }
 
     }
